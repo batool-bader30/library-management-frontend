@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ChatService {
-  final String _apiKey = "AIzaSyAWBLtHrWIn-RH5tWxRAblJOa_q9OOPdJw";
+  final String _apiKey = "your_key";
 
 Stream<String> getAIStreamResponse(String userInput) async* {
   // استخدام v1beta مع streamGenerateContent و alt=sse هو المفتاح
@@ -16,7 +16,7 @@ Stream<String> getAIStreamResponse(String userInput) async* {
   request.body = jsonEncode({
     "contents": [
       {
-        "parts": [{"text": "أنت مساعد مكتبة ذكي لمشروع ReadHub. جاوب بعدة اسطر بدون تفاصيل كثير : $userInput"}]
+        "parts": [{"text": "أنت مساعد مكتبة ذكي لمشروع ReadHub. بس حدا يطلب عنوان كتاب جاوب : $userInput"}]
       }
     ]
   });

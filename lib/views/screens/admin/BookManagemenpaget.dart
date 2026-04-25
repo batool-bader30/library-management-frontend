@@ -321,7 +321,7 @@ class _BooksManagementScreenState extends State<BooksManagementScreen> {
                 width: 150,
                 backgroundcolor: AppColors.darkbackground.withOpacity(.8),
                 textcolor: AppColors.lightbackground,
-                controller: controller.pageNumberController,
+                controller: controller.publishdateController,
               ),
             ],
           ),

@@ -351,7 +351,7 @@ class _ReviewsWidgetState extends State<ReviewsWidget> {
         _buildCell(
           Image.network(
             // التأكد من مسار الصورة (يُفضل استخدام نفس منطق الـ ApiClient.storageUrl)
-            review['book']?['imageUrl'] ?? "", 
+            review.book?.imageUrl ?? "", 
             height: 40,
             errorBuilder: (context, error, stackTrace) => const Icon(Icons.book, size: 30),
           ),
@@ -359,14 +359,14 @@ class _ReviewsWidgetState extends State<ReviewsWidget> {
         // عمود نص المراجعة (الكومنت)
         _buildCell(
           Text(
-            review['comment'] ?? "No comment",
+            review.comment ?? "No comment",
             style: const TextStyle(color: AppColors.darktext, fontSize: 12),
           ),
         ),
         // عمود التاريخ (قص الوقت)
         _buildCell(
           Text(
-            review['createdAt']?.toString().split('T')[0] ?? "", // تقسيم عند T أو مسافة حسب الباك أند
+            review.createdAt?.toString().split('T')[0] ?? "", // تقسيم عند T أو مسافة حسب الباك أند
             style: const TextStyle(color: AppColors.darktext, fontSize: 12),
           ),
         ),

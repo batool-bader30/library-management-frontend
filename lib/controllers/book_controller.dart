@@ -24,6 +24,8 @@ class BookController extends ChangeNotifier {
   final categoriesController = TextEditingController();
   final languageController = TextEditingController();
   final pageNumberController = TextEditingController();
+    final publishdateController = TextEditingController();
+
 
   // --- مِيحكمات التواريخ للاستعارة ---
   final borrowDateController = TextEditingController();
